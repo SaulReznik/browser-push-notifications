@@ -1,10 +1,13 @@
 import './App.css';
+import { token } from './config';
 
 const App = () => {
+  //const user_id = '5fedc679f414663c693cf549';
   const anotherOneHandler = () => {
-    fetch('http://localhost:6789/api/v1/notifications/anotherOne', {
+    fetch(`http://localhost:6789/api/v1/notifications/anotherOne`, {
       method: 'POST',
       headers: {
+          'authorization': token,
           'content-type': 'application/json'
       }
     });
